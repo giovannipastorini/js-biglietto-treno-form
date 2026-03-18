@@ -15,7 +15,7 @@ realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anc
 
 const formEl= document.querySelector("form");
 /* console.log(formEl); */
-const kmFieldEl = document.getElementById("km-field");
+/* const kmFieldEl = document.getElementById("km-field"); */
 /* console.log(kmFieldEl.value); */
 const ageFieldEl= document.getElementById("age-field");
 /* console.log(ageFieldEl); */
@@ -29,6 +29,8 @@ formEl.addEventListener("submit",
 
         console.log("evento submit verificato!");
 
+        const kmFieldEl = document.getElementById("km-field");
+        console.log(kmFieldEl.value);
         
      }
 
