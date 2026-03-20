@@ -50,11 +50,15 @@ formEl.addEventListener("submit",
                //va applicato uno sconto del 40% per gli over 65.
                priceTicket*=0.6;
           }
-
-
-
           //uso il metodo toFixed per ottenere due cifre decimali
           console.log(priceTicket.toFixed(2)+" euro");
+
+          //selezioni i nodi del html relativi ai dettagli del biglietto
+          const personNameEl= document.getElementById("person-name-detail");          
+          const ageEl=document.getElementById("age-detail");
+          const priceEl=document.getElementById("price-detail");
+
+          //modifico i nodi
           
      
           //reset del form 

@@ -11,6 +11,10 @@
     <h1>Calcola il prezzo del tuo biglietto</h1>
     <form>
         <div>
+            <label for="username-field">Inserisici il tuo nome:</label>
+            <input type="text" required id="username-field">
+        </div>
+        <div>
             <label for="km-field">Chilometri da percorrere:</label>
             <input type="number" required id="km-field">
         </div>
@@ -26,10 +30,16 @@
     </form>
     
     <!-- sezione dettagli biglietto -->
-    <section>
-        <h2>Dettagli biglietto</h2>
+    <section class="d-none">
+        <h2>DETTAGLI BIGLIETTO</h2>
+        <ul>
+            <li><strong>Nome passeggero: </strong><span id="person-name-detail"></span></li>
+            <li><strong>Età: </strong><span id="age-detail"></span></li>
+            <li><strong>Prezzo biglietto: </strong><span id="price-detail"></span></li>
+        </ul>
     </section>
 
+    <!-- link javascript -->
     <script src="./main.js"></script>
 </body>
 </html>
