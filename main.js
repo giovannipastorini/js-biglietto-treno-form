@@ -57,11 +57,15 @@ formEl.addEventListener("submit",
           const detailsTicket=document.getElementById("ticket-details");
           const personNameEl= document.getElementById("person-name-detail");          
           const ageEl=document.getElementById("age-detail");
+          const kmEl=document.getElementById("km-detail");
           const priceEl=document.getElementById("price-detail");
 
           //modifico i nodi
           personNameEl.innerText=document.getElementById("username-field").value;
-          
+          ageEl.innerText=`${age}`;
+          kmEl.innerText=`${km}`;
+          priceEl.innerText=`${priceTicket.toFixed(2)+" euro"}`;
+
           //rendo visibile il i dettagli del biglietto:
           detailsTicket.classList.remove("d-none");
 
