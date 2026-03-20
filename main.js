@@ -51,7 +51,7 @@ formEl.addEventListener("submit",
                priceTicket*=0.6;
           }
           //uso il metodo toFixed per ottenere due cifre decimali
-          console.log(priceTicket.toFixed(2)+" euro");
+          //console.log(priceTicket.toFixed(2)+" euro");
 
           //selezioni i nodi del html relativi ai dettagli del biglietto
           const detailsTicket=document.getElementById("ticket-details");
@@ -64,7 +64,7 @@ formEl.addEventListener("submit",
           personNameEl.innerText=document.getElementById("username-field").value;
           ageEl.innerText=`${age}`;
           kmEl.innerText=`${km}`;
-          priceEl.innerText=`${priceTicket.toFixed(2)+" euro"}`;
+          priceEl.innerText=`${priceTicket.toFixed(2)}`;
 
           //rendo visibile il i dettagli del biglietto:
           detailsTicket.classList.remove("d-none");
