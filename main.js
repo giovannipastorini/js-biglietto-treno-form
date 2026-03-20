@@ -14,24 +14,52 @@ realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anc
 */
 
 const formEl= document.querySelector("form");
-/* console.log(formEl); */
-/* const kmFieldEl = document.getElementById("km-field"); */
-/* console.log(kmFieldEl.value); */
+
+const kmFieldEl = document.getElementById("km-field");
 const ageFieldEl= document.getElementById("age-field");
-/* console.log(ageFieldEl); */
 const submitFieldEl= document.getElementById("submit-field");
-/* console.log(submitFieldEl); */
+
+
+
+
 
 
 formEl.addEventListener("submit",
      function(event){
         event.preventDefault();
 
-        console.log("evento submit verificato!");
+          console.log("evento submit verificato!");
+          //Collecting data
+          //dati per calcolare il prezzo del biglietto:
+          //chilometri
+          const km=Number(kmFieldEl.value);
+          console.log(km);
+          //età passeggero
+          const age=Number(ageFieldEl.value);
+          console.log(age);
+          //price per km
+          const pricePerKm=0.21;
 
-        const kmFieldEl = document.getElementById("km-field");
-        console.log(kmFieldEl.value);
-        
+          //Elaboration data:
+          let priceTicket= km*pricePerKm;
+          //controllo sull'età per determinare lo sconto
+          if (age < 18){
+               //va applicato uno sconto del 20% per i minorenni,
+               priceTicket*=0.8;
+          }else if (age > 65){
+               //va applicato uno sconto del 40% per gli over 65.
+               priceTicket*=0.6;
+          }
+
+
+
+          //uso il metodo toFixed per ottenere due cifre decimali
+          console.log(priceTicket.toFixed(2)+" euro");
+          
+     
+          //reset del form 
+          formEl.reset();
+     
      }
 
 );
