@@ -54,13 +54,17 @@ formEl.addEventListener("submit",
           console.log(priceTicket.toFixed(2)+" euro");
 
           //selezioni i nodi del html relativi ai dettagli del biglietto
+          const detailsTicket=document.getElementById("ticket-details");
           const personNameEl= document.getElementById("person-name-detail");          
           const ageEl=document.getElementById("age-detail");
           const priceEl=document.getElementById("price-detail");
 
           //modifico i nodi
+          personNameEl.innerText=document.getElementById("username-field").value;
           
-     
+          //rendo visibile il i dettagli del biglietto:
+          detailsTicket.classList.remove("d-none");
+
           //reset del form 
           formEl.reset();
      
